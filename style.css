@@ -1,0 +1,172 @@
+
+body {
+    
+    /* Memberi jarak dari header */
+    background-color: #1b2135;
+}
+
+
+
+
+.cabinet {
+    position: relative;
+    width: 100%;
+    max-width: 750px;  /* Lebar maksimal lemari kamu */
+    max-height: 85vh;  /* Batasi agar tinggi lemari tidak melebihi 85% tinggi layar monitor */
+    margin: auto;
+    user-select: none;
+}
+
+.cabinet-image {
+    /* Buat 100% agar gambarnya pas mengikuti lebar .cabinet (750px) */
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   CONTAINER SERTIFIKAT
+   ========================================= */
+
+.certificate-container {
+    position: absolute;
+    top: 6%;    /* Berubah jadi persen agar fleksibel mengikuti tinggi lemari */
+    left: 5%;   /* Berubah jadi persen agar fleksibel mengikuti lebar lemari */
+    width: 90%; /* Membatasi lebar area grid di dalam lemari */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom membagi ruang sama rata */
+    gap: 8.1% 7%; /* Gap otomatis mengecil/membesar secara proporsional */
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   FRAME SERTIFIKAT
+   ========================================= */
+
+.certificate {
+    /* Menggabungkan drop-shadow dan brightness tanpa tanda koma (cukup pakai spasi) */
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.4)) brightness(0.3);
+
+    /* Menggabungkan transisi untuk efek transform (hover naik) dan filter (terang/gelap) */
+    transition: transform 0.2s ease, filter 0.3s ease-in-out;
+}
+
+
+/* =========================================
+   GAMBAR SERTIFIKAT
+   ========================================= */
+
+.certificate img {
+
+    display: block;
+
+    width: 100%;
+    /* Isi penuh frame */
+
+    height: auto;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    border: 5px solid #1b2135;
+
+    /* Zoom sertifikat */
+
+}
+
+
+/* =========================================
+   HOVER EFEK
+   ========================================= */
+
+.certificate:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.4)) brightness(1);
+}
+
+/*
+
+
+
+/* =========================================
+   DESKRIPSI
+   ========================================= */
+
+.description {
+    display: none;
+    /* Disembunyikan */
+
+    text-align: center;
+
+    font-family: sans-serif;
+}
+
+
+/* =========================================
+   POPUP GAMBAR
+   ========================================= */
+
+.popup {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.26);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+}
+
+.popup img {
+
+    max-width: 90%;
+    max-height: 90%;
+
+    animation: zoomIn 0.2s ease;
+}
+
+
+/* =========================================
+   ANIMASI POPUP
+   ========================================= */
+
+@keyframes zoomIn {
+
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   TOMBOL TUTUP POPUP
+   ========================================= */
+
+.close-btn {
+
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    color: white;
+
+
+    font-size: 40px;
+
+    cursor: pointer;
+}

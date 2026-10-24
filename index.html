@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main page</title>
+  <link rel="stylesheet" href="Global.css">
+  <link rel="stylesheet" href="index.css">
+  <audio autoplay src="startup.mp3"></audio>
+</head>
+
+<body>
+  <div id="agent">🤖</div>
+  <header>
+    <div class="header">
+
+      <div class="logo">
+        Fathan Portfolio
+      </div>
+
+      <div class="navbar">
+        <a href="">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#project">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#certificates">Certificates</a>
+      </div>
+
+    </div>
+  </header>
+  <div class="jumbotron">
+    <div class="jumbotron-content">
+      <h1>Welcome!</h1>
+      <h3>
+        Developer • Game Creator
+      </h3>
+
+      <p>
+        Building Code. Creating Games. Exploring AI.
+      </p>
+
+
+    </div>
+
+  </div>
+
+
+
+  <main>
+    <aside class="leftbar">
+      <article class="card">
+        <div class="profile">
+          <h2> Developer Profile</h2>
+          <figure>
+            <img src="images/Icon." class="rounded">
+            <figcaption>Fathan</figcaption>
+            <p>
+              Name: Muhammad Fathan Ghani Zaidan <br>
+              Age:11
+            </p>
+          </figure>
+
+        </div>
+      </article>
+      <article class="card">
+        <div class="profile">
+          <h2>Skill</h2>
+          <canvas id="myChart"></canvas>
+
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+          <script>
+            new Chart(document.getElementById("myChart"), {
+              type: "pie",
+              data: {
+                labels: ["Html,css,js", "React native", "python", "Lainnya"],
+                datasets: [{
+                  data: [50, 25, 15, 10]
+                }]
+              }
+            });
+          </script>
+
+        </div>
+      </article>
+    </aside>
+
+    <div class="content">
+      <div class="card">
+        <h1>NEWS</h1>
+        <marquee>
+          Selamat Datang di Website Aether Studio
+        </marquee>
+      </div>
+
+
+    </div>
+  </main>
+
+  <aside class="rightbar">
+    <article class="card">
+      <div class="profile">
+        <h2>Visitor</h2>
+        <progress value="75" max="100"></progress>
+        <p>75% Target Tercapai</p>
+
+
+      </div>
+    </article>
+  </aside>
+  <footer>
+
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+<script src="script.js"></script>
+
+</html>

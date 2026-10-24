@@ -1,0 +1,119 @@
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* logo kiri, navbar kanan */
+    align-items: center;
+    /* sejajar vertikal */
+
+    background: white;
+
+    border-bottom: 4px solid #0033cc;
+    padding: 2px 20px;
+}
+
+
+.navbar {
+    display: flex;
+    gap: 3px;
+    align-self: flex-end;
+    /* turun sedikit seperti Samsung */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #0033cc;
+    background: white;
+    padding: 6px 18px;
+    border: 2px solid #0033cc;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    /* Memastikan elemen merespons padding dan border dengan benar */
+    margin-bottom: -2px;
+    transition: 0.2s;
+}
+
+
+
+
+.navbar a:hover {
+    background: #c1c1ff;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+
+    height: 4px;
+    background: #0033cc;
+}
+
+
+.jumbotron {
+    margin: 10px;
+    height: 350px;
+
+    background-image: url("images/jumbo.gif");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+}
+
+.jumbotron::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+
+}
+
+.jumbotron-content {
+    position: relative;
+    z-index: 1;
+
+    padding-left: 50px;
+}
+
+.jumbotron h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.jumbotron h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+
+    
+
+
+}
+
+.jumbotron p {
+    font-size: 18px;
+}
+
+
+.content {
+    float: left;
+    width: 50%;
+}
